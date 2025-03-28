@@ -11,16 +11,26 @@ Setup
 
 1- Mobile App:
 
-    a. mobile-app klasörünü JetBrains IDE ile açınız.
-    b. Bilgisayarınıza JavaFX paketini/kütüphanesini yükleyiniz.
-    c. IDE üzerinden çalıştırınız.
+a. mobile-app klasörünü JetBrains IDE ile açınız.
+b. Bilgisayarınıza JavaFX paketini/kütüphanesini yükleyiniz.
+c. IDE üzerinden çalıştırınız.
 
-    Eğer harici bir IDE (vscode) kullanıyorsanız:
-    A. mobile-app klasöründeki compile.bat batch dosyasını çalıştırıp uygulamayı compile ediniz.
-    B. mobile-app klasöründeki run.bat batch dosyasını çalıştırıp uygulamayı çalıştırınız.
+Eğer harici bir IDE (vscode) kullanıyorsanız:
+A. mobile-app klasöründeki compile.bat batch dosyasını çalıştırıp uygulamayı compile ediniz.
+B. mobile-app klasöründeki run.bat batch dosyasını çalıştırıp uygulamayı çalıştırınız.
 
 2- Admin Dashboard:
 
-    a. Front-end için ilgili klasöre girip aşağıdaki kodları çalıştırınız:
+a. Front-end için ilgili klasöre girip aşağıdaki kodları çalıştırınız:
+ ```bash
+npm install
+npm run start
+ ```
+b. Back-end için ilgili klasöre girip aşağıdaki kodları çalıştırınız:
+```bash
+npm install
+npm start
+ ```
 
-    b. Back-end için ilgili klasöre girip aşağıdaki kodları çalıştırınız:
+
+
