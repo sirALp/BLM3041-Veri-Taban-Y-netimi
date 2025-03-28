@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane2" prefHeight="634.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="showRentalsController">
+   <children>
+      <Group layoutX="28.0" layoutY="584.0" />
+      <Group layoutX="108.0" layoutY="591.0" />
+      <Group fx:id="Ticket_ticket" layoutX="204.0" layoutY="585.0" stylesheets="@stylesheet.css" />
+      <Group layoutX="289.0" layoutY="585.0" />
+      <TableView fx:id="SRtable" layoutX="8.0" layoutY="125.0" prefHeight="466.0" prefWidth="348.0">
+         <columns>
+            <TableColumn fx:id="SRgarden" prefWidth="120.0" text="Garden" />
+            <TableColumn fx:id="SRstartdate" prefWidth="114.0" text="Start Date" />
+            <TableColumn fx:id="SRenddate" prefWidth="113.0" text="End Date" />
+         </columns>
+      </TableView>
+      <Text fill="#0080bc" layoutX="97.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Rentals" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="46.0" fitWidth="50.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#switchToRentalScene" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/leftArrowBlack.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@Services.css" />
+      <URL value="@stylesheet.css" />
+   </stylesheets>
+</AnchorPane>

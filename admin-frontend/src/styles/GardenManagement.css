@@ -1,0 +1,158 @@
+.garden-management-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+  }
+  
+  .garden-management-container h1,
+  .garden-management-container h2 {
+    margin-bottom: 20px;
+    color: #eee;
+    font-size: 1.8em;
+    text-align: center;
+  }
+  
+  .garden-management-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .garden-management-buttons button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .garden-management-buttons button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  .garden-list-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+  }
+  
+  .garden-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 10px; /* Reduce padding for a smaller table */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  td:last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  button.delete-button {
+    background-color: #f44336; /* Reddish color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #eee;
+  }
+  
+  .modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the inputs */
+    gap: 10px;
+  }
+  
+  #gardenId, #userId, #rentalPeriod {
+    text-wrap: nowrap;
+  }
+
+  .garden-table input, .modal select {
+    width: 50%; /* Set input width to 30% */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    text-wrap: nowrap;
+  }
+  
+  .modal button {
+    width: 60%; /* Set button width to 75% */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .modal .cancel-button {
+    background-color: #f44336;
+  }
+  .modal .cancel-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .modal button:hover {
+    background-color: #45a049;
+  }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MarketItemAnchor" prefHeight="118.0" prefWidth="236.0" stylesheets="@Services.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketItemController">
+
+   <children>
+      <!-- İtem Adı -->
+      <Text fx:id="itemNameText" fill="WHITE" layoutX="15.0" layoutY="31.0" strokeWidth="0.5" text="Item Name" wrappingWidth="200.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Text>
+
+      <!-- Kilogram Seçim Kutusu -->
+      <ChoiceBox fx:id="kgChoiceBox" layoutX="15.0" layoutY="50.0" prefHeight="26.0" prefWidth="90.0" />
+
+      <!-- Kilogram Başına Fiyat -->
+      <Text fill="WHITE" layoutX="115.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price per kg:" wrappingWidth="100.0">
+         <font>
+            <Font name="Arial Bold" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="pricePerKgText" fill="#d3d3d3" layoutX="180.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font name="Arial Bold" size="10.0" />
+         </font>
+      </Text>
+
+      <!-- Satın Al Butonu -->
+      <Button fx:id="BuyButton" layoutX="150.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#switchToPaymentScene" prefHeight="26.0" prefWidth="70.0" text="Buy" />
+   </children>
+</AnchorPane>

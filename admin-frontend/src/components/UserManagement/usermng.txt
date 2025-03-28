@@ -1,0 +1,57 @@
+import React, { useState, useEffect } from 'react';
+import initSqlJs, { Database } from 'sql.js';
+import UserTable from './UserTable.tsx';
+import { useNavigate } from 'react-router-dom';
+import { User } from '../../types/types.ts';
+import '../../styles/UserManagement.css';
+
+
+
+const UserManagement = () => {
+  const [users, setUsers] = useState<User[]>([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const loadDatabase = async () => {
+      const SQL = await initSqlJs({
+        locateFile: (file) => `{enter database URL here!!}`, 
+      });
+
+      // Create a new database
+      const db = new SQL.Database();
+
+      // Create a table and insert some data
+      db.run(`
+      `);
+
+      // Run a query to select all users
+      const result = db.exec("SELECT * FROM UsersList");
+
+      // Convert the result to a usable format
+      if (result.length > 0) {
+        const values = result[0].values;
+        const formattedUsers = values.map((row) => ({
+          id: row[0] as number,
+          username: row[1] as string,
+          name: row[2] as string,
+        }));
+        setUsers(formattedUsers);
+      }
+      db.close();
+    };
+
+    loadDatabase();
+  }, []);
+
+  return (
+    <div className="user-management">
+      <h1 style={{ width: '80%', height: '20%' }}>User Management</h1>
+      <UserTable users={users} setUsers={setUsers} />
+      <button className='back-button' onClick={() => navigate('/')}>
+        Back to Dashboard
+      </button>
+    </div>
+  );
+};
+
+export default UserManagement;

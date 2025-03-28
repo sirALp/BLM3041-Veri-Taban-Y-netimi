@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane1" prefHeight="634.0" prefWidth="363.0"
+            xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="TicketController">
+    <children>
+
+        <!-- Bazı boş Group'lar -->
+        <Group layoutX="28.0" layoutY="584.0" />
+        <Group layoutX="108.0" layoutY="591.0" />
+        <Group fx:id="Ticket_ticket" layoutX="204.0" layoutY="585.0" stylesheets="@stylesheet.css" />
+        <Group layoutX="289.0" layoutY="585.0" />
+
+        <!-- Başlık "Ticket" -->
+        <Text layoutX="129.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket">
+            <font>
+                <Font name="Calibri Bold" size="40.0" />
+            </font>
+        </Text>
+
+        <!-- "Send" butonu -->
+        <Button fx:id="sendTicketButton"
+                layoutX="34.0" layoutY="376.0"
+                mnemonicParsing="false"
+                prefHeight="40.0" prefWidth="299.0"
+                stylesheets="@stylesheet.css"
+                text="Send" textFill="WHITE"
+                onMouseClicked="#showConfirmationPopup">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+
+        <!-- Hata / Başarı mesajı gösterilecek Text -->
+        <Text fx:id="succesTicketSend"
+              fill="#3115b9"
+              layoutX="8.0"
+              layoutY="437.0"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0"
+              textAlignment="CENTER"
+              wrappingWidth="348.59234619140625">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Text>
+
+        <!-- Navigasyon kısımları (Home, Rental, Ticket, Marketplace) -->
+        <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="26.0" layoutY="593.0"
+                   onMouseClicked="#switchToHomeScene"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/houseBlack.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="33.0" layoutY="641.0"
+              onMouseClicked="#switchToHomeScene"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Home">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="115.0" layoutY="601.0"
+                   onMouseClicked="#switchToRentalScene"
+                   opacity="0.75"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/6_siyah.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="115.0" layoutY="641.0"
+              onMouseClicked="#switchToRentalScene"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Rental">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="301.0" layoutY="602.0"
+                   opacity="0.75"
+                   pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../Assets/4.png" />
+            </image>
+        </ImageView>
+        <Text fill="#13bf00" layoutX="299.0" layoutY="640.0"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0"
+              text="Ticket">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="210.0" layoutY="603.0"
+                   onMouseClicked="#switchToMarketplaceScene"
+                   opacity="0.75"
+                   pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../Assets/7_siyah.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="193.0" layoutY="641.0"
+              onMouseClicked="#switchToMarketplaceScene"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Marketplace">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+
+        <!-- Equipment text alanı -->
+        <TextArea fx:id="ticketMsgField"
+                  layoutX="181.0" layoutY="255.0"
+                  prefHeight="39.0" prefWidth="142.0"
+                  promptText="Equipment name..">
+            <stylesheets>
+                <URL value="@Services.css" />
+            </stylesheets>
+        </TextArea>
+        <Text layoutX="45.0" layoutY="279.0" stroke="#8d8d8d" strokeType="OUTSIDE" strokeWidth="0.5" text="Equipment">
+            <font>
+                <Font name="Arial" size="21.0" />
+            </font>
+        </Text>
+
+        <!-- Quantity ChoiceBox -->
+        <Text layoutX="47.0" layoutY="332.0" stroke="#808080" strokeType="OUTSIDE" strokeWidth="0.5" text="Quantitiy">
+            <font>
+                <Font name="Arial" size="21.0" />
+            </font>
+        </Text>
+        <ChoiceBox fx:id="choiceQntTicketBox"
+                   accessibleText="Choose Value"
+                   layoutX="182.0" layoutY="312.0"
+                   prefHeight="26.0" prefWidth="142.0">
+            <stylesheets>
+                <URL value="@Services.css" />
+            </stylesheets>
+        </ChoiceBox>
+
+        <!-- "Show Tickets" butonu -->
+        <Text layoutX="24.0" layoutY="529.0"
+              stroke="#808080"
+              strokeType="OUTSIDE"
+              strokeWidth="0.5"
+              text="You can check your previous ticket situations">
+            <font>
+                <Font name="Arial" size="16.0" />
+            </font>
+        </Text>
+        <Button fx:id="showTicketsButton"
+                layoutX="208.0" layoutY="543.0"
+                mnemonicParsing="false"
+                onMouseClicked="#switchToShowTickets"
+                prefHeight="39.0" prefWidth="142.0"
+                stylesheets="@Services.css"
+                text="Tickets" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+
+        <!-- Popup Pane (başlangıçta görünmez) -->
+        <Pane fx:id="confirmationPane"
+              layoutX="50.0" layoutY="450.0"
+              prefHeight="100.0" prefWidth="260.0"
+              style="-fx-background-color: #f0f0f0;
+                     -fx-border-color: black;
+                     -fx-border-width: 2;
+                     -fx-padding: 10;"
+              visible="false">
+            <children>
+                <!-- VBox tüm popup alanını dolduruyor -->
+                <VBox alignment="CENTER" spacing="15"
+                      layoutX="0.0" layoutY="0.0"
+                      prefWidth="260.0" prefHeight="100.0">
+                    <children>
+                        <Text text="Are you sure to send ticket?">
+                            <font>
+                                <Font name="Arial Bold" size="16.0"/>
+                            </font>
+                        </Text>
+                        <!-- HBox ile "Yes" ve "No" butonlarını yan yana yerleştiriyoruz -->
+                        <HBox alignment="CENTER" spacing="20">
+                            <children>
+                                <Button text="Yes" onMouseClicked="#handleYes"/>
+                                <Button text="No" onMouseClicked="#handleNo"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </children>
+    <stylesheets>
+        <URL value="@stylesheet.css" />
+    </stylesheets>
+</AnchorPane>

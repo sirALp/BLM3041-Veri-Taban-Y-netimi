@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paymentMarketItemController">
+    <children>
+        <ImageView fitHeight="50.0" fitWidth="62.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#switchToMarketplaceScene" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/leftArrowBlack.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="paymentCrNo" layoutX="66.0" layoutY="242.0" prefHeight="34.0" prefWidth="230.0" promptText="5501 2134 **** ****" stylesheets="@Services.css" />
+        <Text fill="#3b3b3b" layoutX="69.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card No">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Text>
+        <TextField fx:id="paymentExpMonth" layoutX="69.0" layoutY="302.0" prefHeight="16.0" prefWidth="50.0" promptText="02" stylesheets="@Services.css" />
+        <TextField fx:id="paymentExpYear" layoutX="162.0" layoutY="302.0" prefHeight="39.0" prefWidth="55.0" promptText="2029" stylesheets="@Services.css" />
+        <Text fill="#3b3b3b" layoutX="69.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exp. Month">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3b3b3b" layoutX="162.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exp. Year">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3b3b3b" layoutX="249.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVV">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <PasswordField fx:id="paymentCvv" layoutX="238.0" layoutY="301.0" prefHeight="39.0" prefWidth="50.0" promptText="245" stylesheets="@Services.css" />
+        <Button fx:id="payButton" layoutX="100.0" layoutY="443.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="163.0" text= "Pay" onMouseClicked="#handlePayButtonAction">
+            <font>
+                <Font name="Arial Bold" size="33.0" />
+            </font>
+        </Button>
+        <Text fx:id="duePaymentErrorText" fill="#f70000" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="363.0">
+            <font>
+                <Font name="Calibri" size="19.0" />
+            </font>
+        </Text>
+    </children>
+    <stylesheets>
+        <URL value="@Services.css" />
+        <URL value="@stylesheet.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="GardenAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="236.0" stylesheets="@Services.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GardenItemController">
+   <children>
+      <Button fx:id="RentButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="149.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#switchToPaymentScene" text="Rent" />
+      <Text fx:id="gardenLocationText" fill="WHITE" layoutX="16.0" layoutY="44.0" opacity="0.89" strokeType="OUTSIDE" strokeWidth="0.0" text="Location :" wrappingWidth="79.26514434814453">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="42.0" layoutY="66.0" opacity="0.89" strokeType="OUTSIDE" strokeWidth="0.0" text="Arce :" wrappingWidth="79.26514434814453">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="gardenLocationValue" fill="#d3d3d3" layoutX="83.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="loc" wrappingWidth="80.0">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="gardenArceText" fill="#d3d3d3" layoutX="83.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="84.11240005493164">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="29.0" layoutY="89.0" opacity="0.89" strokeType="OUTSIDE" strokeWidth="0.0" text="Price $ : " wrappingWidth="62.1100462891759">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="gardenPriceText" fill="#d3d3d3" layoutX="83.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="90.04383839957836">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

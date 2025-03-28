@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: 'Lora', 'Open Sans', 'Nunito', -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Option 1 - Natural and Professional */
+body {
+  font-family: 'Quicksand', 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Option 2 - Modern and Organic */
+body {
+  font-family: 'Nunito', 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
+
+/* Option 3 - Fresh and Clean */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}

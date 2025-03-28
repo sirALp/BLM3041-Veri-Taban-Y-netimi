@@ -1,0 +1,68 @@
+/* AnchorPane Background */
+#anchorPane1 {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            rgb(255, 255, 255) 0%,
+            rgb(222, 234, 222) 50%,
+            rgb(255, 255, 255) 100%
+    ); /* Light gradient background */
+}
+
+#anchorPane2 {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            rgb(255, 255, 255) 0%,
+            rgb(228, 230, 248) 50%,
+            rgb(255, 255, 255) 100%
+    ); /* Light gradient background */
+}
+
+
+/* Send Button */
+.button {
+    -fx-background-color: linear-gradient( #57D77A 0%, #46A192 100%);
+    -fx-background-radius: 30 30 30 30;
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 16px;
+    -fx-font-family: 'Arial Bold';
+    -fx-padding: 10 20; /* Adjust padding for a modern look */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 8, 0, 2, 2); /* Drop shadow for depth */
+}
+
+.button:pressed {
+    -fx-background-color: #0b7000;
+    -fx-background-radius: 30; /* Keep rounded corners when pressed */
+    -fx-effect: none; /* Remove shadow on press */
+}
+
+/* Background Gradient */
+#baselineAnchor {
+    -fx-background-color: linear-gradient(
+            rgb(34, 139, 34) 0%,
+            rgb(85, 180, 85) 20%,
+            rgb(144, 238, 144) 40%,
+            rgb(193, 255, 193) 60%,
+            rgba(240, 255, 240, 1) 80%,
+            white 100%
+    );
+}
+
+
+
+
+/* Rounded Tickets Section */
+.Ticket_ticket {
+    -fx-background-color: #13bf00;
+    -fx-background-radius: 30; /* Rounded corners */
+}
+
+/* Rounded Blur Effect */
+#Blur {
+    -fx-background-radius: 40; /* Smooth rounded edges */
+}
+
+/* Add spice to other elements if needed */
+#WeatherShadow {
+    -fx-background-radius: 60; /* Uniform rounding */
+}

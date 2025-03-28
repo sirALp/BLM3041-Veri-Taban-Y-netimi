@@ -1,0 +1,139 @@
+.ticket-management-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+  }
+  
+  .ticket-management-container h1 {
+    margin-bottom: 20px;
+    color: #eee;
+    font-size: 1.8em;
+    text-align: center;
+  }
+  
+  .ticket-tables {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .ticket-table {
+    width: 48%;
+  }
+  
+  .ticket-table h2 {
+    text-align: center;
+    color: #eee;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  td:last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  /* Organize the button group */
+.ticket-table .button-group {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15px;
+  border-radius: 0px;
+}
+
+/* Ensure buttons don't break the table layout */
+.button-group button {
+  white-space: nowrap;
+  padding: 5px 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+/* Different colors for each button */
+.button-group button.details-button {
+  background-color: #2196F3; /* Blue */
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.button-group button.approve-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.button-group button.deny-button {
+  background-color: #F44336; /* Red */
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+
+/* Optional: Add hover effects */
+.button-group button:hover {
+  opacity: 0.9;
+}
+
+
+  
+  .ticket-details {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-details h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .ticket-details p {
+    margin: 5px 0;
+  }

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane1" prefHeight="634.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+   <children>
+      <Group layoutX="28.0" layoutY="584.0">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/2.png" />
+               </image>
+            </ImageView>
+            <Text fill="#13bf02" layoutX="7.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="108.0" layoutY="591.0">
+         <children>
+            <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="5.0" layoutY="-9.0" onMouseClicked="#switchToRentalScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/6_siyah.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="5.0" layoutY="32.0" onMouseClicked="#switchToRentalScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group fx:id="Ticket_ticket" layoutX="204.0" layoutY="585.0" />
+      <Group layoutX="289.0" layoutY="585.0" />
+      <ImageView fitHeight="285.0" fitWidth="285.0" layoutX="36.0" layoutY="26.0">
+         <image>
+            <Image url="@../Assets/1.png" />
+         </image>
+      </ImageView>
+      <Text fill="#0fbf00" layoutX="39.0" layoutY="386.0" stroke="#0f9702" strokeType="OUTSIDE" strokeWidth="0.5" text="Hoşgeldin ">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="welcomeText" fill="#0fbf00" layoutX="191.0" layoutY="385.0" stroke="#0f9702" strokeType="OUTSIDE" strokeWidth="0.5" text="x">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Text>
+      <Line endX="175.8765869140625" layoutX="146.0" layoutY="399.0" startX="-106.94859313964844" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="296.0" layoutY="585.0" onMouseClicked="#switchToTicketScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/chatBlack.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="294.0" layoutY="623.0" onMouseClicked="#switchToTicketScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="205.0" layoutY="586.0" onMouseClicked="#switchToMarketplaceScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/7_siyah.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="188.0" layoutY="624.0" onMouseClicked="#switchToMarketplaceScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Marketplace">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Text>
+   </children>
+   <stylesheets>
+      <URL value="@Services.css" />
+      <URL value="@stylesheet.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,92 @@
+.log-management-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.log-management-container h1 {
+  margin-bottom: 20px;
+  color: #eee;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+td:last-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button.delete-button {
+  background-color: #f44336; /* Reddish color */
+}
+
+button.delete-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+.log-details {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.log-details h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.log-details p {
+  margin: 5px 0;
+}
+
+.log-table > tbody > tr > td > button {
+  width: 100px;
+  height: 35px;
+}

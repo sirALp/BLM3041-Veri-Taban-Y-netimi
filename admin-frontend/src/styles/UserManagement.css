@@ -1,0 +1,95 @@
+.user-management-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly more opaque for better contrast */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow for more depth */
+  backdrop-filter: blur(10px);
+}
+
+.user-management-container h1 {
+  margin-bottom: 20px;
+  color: #EEE;
+  font-size: 1.8em; /* Larger font size for the title */
+  text-align: center; /* Center the title */
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff; /* Ensure table has a solid background */
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures rounded corners are visible */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the table */
+}
+
+.user-table th, 
+.user-table td {
+  padding: 15px; /* More padding for better spacing */
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Only bottom border for cleaner look */
+}
+
+.user-table th {
+  background-color: #4CAF50; /* Distinct header background */
+  color: white;
+  font-weight: bold;
+}
+
+.user-table th:last-child {
+  display: flex;
+  justify-content:space-evenly; /* Align buttons to the right */
+  padding-left: 35%;
+}
+
+.user-table td:last-child {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add space between buttons */
+}
+
+.user-table tr:hover {
+  background-color: #f9f9f9; /* Softer hover effect */
+}
+
+.user-table button {
+  padding: 5px 10px; /* Standard button padding */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-table button:hover {
+  background-color: #45a049;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px; /* More padding for a larger button */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Add transform for a subtle effect */
+}
+
+.back-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.permission-modal.modal {
+  border: 4px green dotted;
+  background:honeydew;
+}
+
+.permission-modal.modal > h2{
+  color: brown;
+}

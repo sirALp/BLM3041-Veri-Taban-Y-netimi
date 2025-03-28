@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane1" prefHeight="634.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MarketplaceController">
+    <children>
+        <Group layoutX="28.0" layoutY="584.0" />
+        <Group fx:id="Ticket_ticket" layoutX="204.0" layoutY="585.0" stylesheets="@stylesheet.css" />
+        <Group layoutX="289.0" layoutY="585.0" />
+      <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="27.0" layoutY="585.0" onMouseClicked="#switchToHomeScene" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/houseBlack.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="34.0" layoutY="633.0" onMouseClicked="#switchToHomeScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="116.0" layoutY="593.0" onMouseClicked="#switchToRentalScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/6_siyah.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="116.0" layoutY="633.0" onMouseClicked="#switchToRentalScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="302.0" layoutY="594.0" onMouseClicked="#switchToTicketScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/chatBlack.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="300.0" layoutY="632.0" onMouseClicked="#switchToTicketScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="211.0" layoutY="595.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/7.png" />
+         </image>
+      </ImageView>
+      <Text fill="#10b916" layoutX="194.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marketplace">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Text>
+        <Text layoutX="80.0" layoutY="58.0" style="-fx-text-alignment: center;" text="Marketplace">
+            <font>
+                <Font name="Arial Bold" size="35.0" />
+            </font>
+        </Text>
+      <Button fx:id="sellMarketplaceButton" layoutX="34.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#switchToSellScene" prefHeight="63.0" prefWidth="142.0" stylesheets="@Services.css" text="Sell Item" />
+
+        <!-- Scroll veya FlowPane ekleyelim -->
+        <ScrollPane fitToWidth="true" layoutX="20.0" layoutY="80.0" prefHeight="400" prefWidth="320">
+            <content>
+                <FlowPane fx:id="marketItemsContainer" alignment="CENTER" hgap="10" prefWrapLength="280.0" vgap="10" />
+            </content>
+        </ScrollPane>
+
+        <Button fx:id="showPurchasesButton" layoutX="186.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#switchToPurchases" prefHeight="63.0" prefWidth="142.0" stylesheets="@Services.css" text="Purchases" />
+
+
+    </children>
+   <stylesheets>
+      <URL value="@stylesheet.css" />
+      <URL value="@Services.css" />
+   </stylesheets>
+</AnchorPane>

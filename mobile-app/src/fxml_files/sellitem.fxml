@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane1" prefHeight="634.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sellitemController">
+    <children>
+        <Group layoutX="28.0" layoutY="584.0" />
+        <Group layoutX="108.0" layoutY="591.0" />
+        <Group fx:id="Ticket_ticket" layoutX="204.0" layoutY="585.0" stylesheets="@stylesheet.css" />
+        <Group layoutX="289.0" layoutY="585.0" />
+        <Text layoutX="110.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sell Item">
+            <font>
+                <Font name="Calibri Bold" size="40.0" />
+            </font>
+        </Text>
+        <Button fx:id="sellButtonMarket" layoutX="34.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#showConfirmationPopup" prefHeight="40.0" prefWidth="299.0" stylesheets="@stylesheet.css" text="Sell" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+        <Text fx:id="succesTicketSend" fill="#3115b9" layoutX="8.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="348.59234619140625" />
+        <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="26.0" layoutY="593.0" onMouseClicked="#switchToHomeScene" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/houseBlack.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="33.0" layoutY="641.0" onMouseClicked="#switchToHomeScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="115.0" layoutY="601.0" onMouseClicked="#switchToRentalScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/6_siyah.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="115.0" layoutY="641.0" onMouseClicked="#switchToRentalScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="301.0" layoutY="602.0" onMouseClicked="#switchToTicketScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/chatBlack.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="299.0" layoutY="640.0" onMouseClicked="#switchToTicketScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="210.0" layoutY="603.0" onMouseClicked="#switchToMarketplaceScene" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Assets/7.png" />
+            </image>
+        </ImageView>
+        <Text fill="#03bc40" layoutX="193.0" layoutY="641.0" onMouseClicked="#switchToMarketplaceScene" strokeType="OUTSIDE" strokeWidth="0.0" text="Marketplace">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Text>
+        <TextArea fx:id="itemNameTxtField" layoutX="181.0" layoutY="214.0" prefHeight="39.0" prefWidth="142.0" promptText="Equipment name..">
+            <stylesheets>
+
+                <URL value="@Services.css" />
+            <URL value="@stylesheet.css" />
+            </stylesheets></TextArea>
+        <Text layoutX="45.0" layoutY="238.0" stroke="#8d8d8d" strokeType="OUTSIDE" strokeWidth="0.5" text="Item Name">
+            <font>
+                <Font name="Arial" size="21.0" />
+            </font>
+        </Text>
+        <Text layoutX="47.0" layoutY="300.0" stroke="#808080" strokeType="OUTSIDE" strokeWidth="0.5" text="Quantitiy">
+            <font>
+                <Font name="Arial" size="21.0" />
+            </font>
+        </Text>
+        <ChoiceBox fx:id="choiceQntTicketBox" accessibleText="Choose Value" layoutX="182.0" layoutY="280.0" prefHeight="26.0" prefWidth="142.0">
+            <stylesheets>
+
+                <URL value="@Services.css" />
+            </stylesheets></ChoiceBox>
+      <TextArea fx:id="itemPriceTxtField" layoutX="183.0" layoutY="322.0" prefHeight="39.0" prefWidth="142.0" promptText="Equipment name..">
+         <stylesheets>
+            <URL value="@Services.css" />
+         </stylesheets>
+      </TextArea>
+      <Text layoutX="47.0" layoutY="346.0" stroke="#8d8d8d" strokeType="OUTSIDE" strokeWidth="0.5" text="Price per kg">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Text>
+
+      <ImageView fitHeight="55.0" fitWidth="54.0" layoutX="1.0" layoutY="14.0" onMouseClicked="#switchToMarketplaceScene" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/leftArrowBlack.png" />
+         </image>
+      </ImageView>
+
+
+        <!-- Confirmation Pane (Popup benzeri) -->
+        <Pane fx:id="confirmationPane" layoutX="50.0" layoutY="180.0" prefHeight="150.0" prefWidth="260.0" style="-fx-background-color: #EAEAEA; -fx-border-color: black; -fx-border-width: 2;" visible="false">
+            <children>
+                <Text layoutX="20.0" layoutY="40.0" text="Are you sure?">
+               <font>
+                  <Font name="Arial Bold" size="29.0" />
+               </font></Text>
+                <Button layoutX="40.0" layoutY="80.0" onMouseClicked="#handleYes" text="Yes" />
+                <Button layoutX="120.0" layoutY="80.0" onMouseClicked="#handleNo" text="No" />
+            </children>
+        </Pane>
+      <Text fx:id="sellitemInfoTxt" fill="#d00000" layoutX="40.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="288.0">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+
+    </children>
+    <stylesheets>
+
+        <URL value="@stylesheet.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Open Sans', 'Nunito', -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    background: url('../public/wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    color: #333;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  #gardenhub-logo {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 250px;
+    background: url('../public/gardenhub_logo.png') no-repeat center center ;
+    background-size: contain;
+  }
+
+  
+  .app-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .login-page, .dashboard, .page {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  
+  .nav-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #45a049;
+  }
+  
+  input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  .modal button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color: #45a049;
+  }
+
+  button.delete-button {
+    background-color: #f44336; /* Reddish color */
+    color: white;
+  }
+  
+  button.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+
+  button.back-button::before {
+    content: '←';
+    margin-right: 5px;
+  }
+
+  button.back-button {
+    background-color: #4c82af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button.back-button:hover {
+    background-color: #3f6e9e;
+  }
+
+  button.back-button:disabled {
+    background-color: #ccc;
+  }
+
+  .form-group {
+    display: flex;
+    margin-bottom: 10px; /* Optional: adds space between pairs */
+    align-items: center;
+  }
+
+  .form-group label {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  .form-group input {
+    width: 50%;
+  }

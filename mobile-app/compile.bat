@@ -1,0 +1,1 @@
+javac --module-path "C:/javafx-sdk-23.0.1/lib" --add-modules javafx.controls,javafx.fxml -cp "C:/javafx-sdk-23.0.1/lib/*" -d ./out/production/GARDENHUB ./src/*.java
